@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSC-435 PlantWatchers</title>
+</head>
+<body style="background-color:#F9FFED">
+
+<form action="/hello" method="GET" id="nameForm">
+    <div>
+        <label for="nameField">How should the app call you?</label>
+        <input name="myName" id="nameField">
+        <button>Greet me!</button>
+    </div>
+</form>
+
+<div class="block">
+
+    <h1>Tom Moskal: CSC 435 - PlantWatchers webservice</h1>
+    <p>
+        <strong>
+            This site is designed with servlets and interaction is done through REST requests
+            <br> This page is the only html on the website, (This is a CLI game) and it will instruct users on the basic commands
+            <br> Bracketed items ie.. {user_id} are not bracketed but should be typed plainly into the url
+            <br> Commands with an asterisks (*) are admin use commands
+        </strong>
+    </p>
+    <hr>
+
+    <hr>
+</div>
+
+
+
+<div class="block">
+    <h3>Endpoints & their applicable REST commands</h3>
+    <p>
+        Begin by creating a user account and then making a plant with a name, type of plant and your user ID. <br>
+        Water and feed your plant to grow it to maturity, and then harvest it for points.<br>
+        Become the best virtual plant grower in the world!
+    <p>
+    <p>
+    <h4>User Endpoint</h4>
+    <p>
+        <strong>This endpoint allows a user to create an account and view it's score
+            <br></strong>
+    </p>
+
+    <ul>
+
+        <li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POST /user</b>
+            <br> user?create={new account name} will create a new account and id, remember your ID!
+        </li>
+        <li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GET /user/{user_id}</b>
+            <br> user?user_id={user_id #} will show the users current score and username<br>
+        </li>
+        <!--
+        <li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUT /user/{plantId}</b>
+            <br> user?newUser={newUsername} will change a users name
+        </li>
+        <li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DELETE /user/{plantId}</b>
+            <br>
+        </li>
+        -->
+
+    </ul>
+
+
+    <h4>Plant Endpoint</h4>
+    <strong>
+        This endpoint allows a user to create a plant and view its attributes. <br>
+    </strong>
+
+    <ul>
+
+        <li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POST /plant</b>
+            <br> plant?name={new plant name}&type={plant type}&user_id={user_id} creates your plant!
+        </li>
+        <li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GET /plant</b>
+            <br> plant?plant_id={plant_id #}
+            Shows the attributes of the plant and a picture of its current growth stage <br>
+        </li>
+        <li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*PUT /plant</b>
+            <br> plant?{maturity, waterLevel, plantName or PlantType}={new String or int} will update the plant's attributes
+        </li>
+        <li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*DELETE /users/{userId}</b>
+            <br> plant?{plant_id} will allow an admin to delete a plant and no user gains score
+
+    </ul>
+
+
+    <h4>Actions Endpoint</h4>
+    <strong>
+        This endpoint allows a user to take actions with their plant. <br>
+    </strong>
+
+    <ul>
+
+        <li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUT /actions</b>
+            <br> actions?water={plant_id} will water your plant by 25 points.
+            <br> actions?feed={plant_id} will feed your plant and take some water, maturity gain is dependent on water level.
+            <br> actions?harvest={plant_id} will harvest your plant, the maturity level at harvest will return points for your user score.
+            <br> You can also chain these commands to water, feed and/or harvest in one REST input.<br>
+        </li>
+
+    </ul>
+
+       <!-- <h4>Leaderboard Endpoint</h4>
+        <strong>This endpoint allows a user to view other user's plant scores
+            <br></strong>
+        <ul>
+
+            <li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GET /leaderboard</b>
+                <br>
+            </li>
+
+
+        -->
+        </ul>
+        <hr>
+</div>
+</body>
+</html>
