@@ -33,20 +33,11 @@ public class PlantWatchersSpringApplication {
             repository.save(new Users(0,"Nosy Neighbor", "fakeEmail@bananas.com", "hashedPW"));
             repository.save(new Users(0,"Farmin' Joe", "fakeEmail@bananas.com", "hashedPW"));
 
-
             log.info("Showing all farmers");
             for (Users user : repository.findAll()) {
                 log.info(user.toString());
             }
-            log.info("");
-
-           // Users user = repository.findUserById(1L);
-            //log.info(user.toString());
-            //log.info("");
-
-
+            log.info("Setup completed.");
         };
     }
-
-
 }
