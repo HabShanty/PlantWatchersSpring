@@ -1,6 +1,6 @@
-package com.plantwatchersspring.db;
+package com.plantwatchersspring.repository;
 
-import com.plantwatchersspring.models.Plant;
+import com.plantwatchersspring.entity.Plant;
 import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 

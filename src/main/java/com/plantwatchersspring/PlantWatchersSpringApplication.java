@@ -1,15 +1,16 @@
 package com.plantwatchersspring;
 
-import com.plantwatchersspring.db.UserRepository;
-import com.plantwatchersspring.db.PlantRepository;
-import com.plantwatchersspring.models.Users;
+import com.plantwatchersspring.repository.UserRepository;
+import com.plantwatchersspring.entity.Users;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 
+@ComponentScan({"com.plantwatchersspring.repository", "com.plantwatchersspring.entity", "com.plantwatchersspring.controller"})
 @SpringBootApplication
 public class PlantWatchersSpringApplication {
 
@@ -39,9 +40,9 @@ public class PlantWatchersSpringApplication {
             }
             log.info("");
 
-            Users user = repository.findUserById(1L);
-            log.info(user.toString());
-            log.info("");
+           // Users user = repository.findUserById(1L);
+            //log.info(user.toString());
+            //log.info("");
 
 
         };

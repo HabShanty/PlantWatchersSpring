@@ -1,4 +1,4 @@
-package com.plantwatchersspring.models;
+package com.plantwatchersspring.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
