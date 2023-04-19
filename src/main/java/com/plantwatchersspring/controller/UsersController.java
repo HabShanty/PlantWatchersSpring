@@ -1,8 +1,8 @@
 package com.plantwatchersspring.controller;
 
 import com.plantwatchersspring.entity.Users;
+import com.plantwatchersspring.repository.PlantRepository;
 import com.plantwatchersspring.repository.UserRepository;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +16,9 @@ public class UsersController {
 
     @Autowired
     UserRepository usersRepo;
+
+    @Autowired
+    PlantRepository plantRepo;
 
     @PostMapping("/users")
     public ResponseEntity<Users> save(@RequestBody Users users) {

@@ -10,10 +10,10 @@ public class Plant {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
-    private int water_level;
+    private long water_level;
     private String name;
     private String type;
-    private int maturity;
+    private long maturity;
     private long userId;
 
     protected Plant(){}
@@ -25,7 +25,7 @@ public class Plant {
 
     }
 
-    public Plant(long plant_id, int water_level, String name, String type, int maturity, long userId) {
+    public Plant(long plant_id, long water_level, String name, String type, long maturity, long userId) {
         this.id = plant_id;
         this.water_level = water_level;
         this.name = name;
@@ -45,21 +45,21 @@ public class Plant {
         return id;
     }
 
-    public void setPlant_id(int plant_id) {
+    public void setPlant_id(long plant_id) {
         this.id = plant_id;
     }
 
-    public int getWater() {
+    public long getWater() {
         return water_level;
     }
 
-    public void setWater(int newWater) {
+    public void setWater(long newWater) {
         this.water_level = newWater;
         if (this.water_level < 0 ) this.water_level = 0;
         if (this.water_level > 100 ) this.water_level = 100;
     }
 
-    public void addWater(int newWater) {
+    public void addWater(long newWater) {
         this.water_level += newWater;
         if (this.water_level < 0 ) this.water_level = 0;
         if (this.water_level > 100 ) this.water_level = 100;
@@ -81,15 +81,15 @@ public class Plant {
         this.type = type;
     }
 
-    public int getMaturity() {
+    public long getMaturity() {
         return maturity;
     }
 
-    public void setMaturity(int maturity) {
+    public void setMaturity(long maturity) {
         this.maturity = maturity;
     }
 
-    public void addMaturity(int newMaturity) {
+    public void addMaturity(long newMaturity) {
         this.maturity += newMaturity;
         if (this.maturity < 0 ) this.maturity = 0;
         if (this.maturity > 100 ) this.maturity = 100;
@@ -99,7 +99,7 @@ public class Plant {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
 

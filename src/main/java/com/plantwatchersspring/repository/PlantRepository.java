@@ -13,6 +13,8 @@ import org.springframework.stereotype.Repository;
 public interface PlantRepository extends
         PagingAndSortingRepository<Plant, Long>,
         JpaRepository<Plant, Long> {
+
+    List<Plant> findAllByUserId(long user_Id);
     /*
     List<Plant> findPlantByUserId(Long id);
 
