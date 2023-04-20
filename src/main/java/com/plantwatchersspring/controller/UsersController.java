@@ -20,9 +20,23 @@ public class UsersController {
     @Autowired
     PlantRepository plantRepo;
 
+/*
     @PostMapping("/users")
     public ResponseEntity<Users> save(@RequestBody Users users) {
         try {
+            return new ResponseEntity<>(usersRepo.save(users), HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+*/
+    // the Slash / after users Is VERY IMPORTANT when sending a request.
+    @PostMapping("/users/")
+    public ResponseEntity<Users> defaultSave(@RequestParam(name = "name") String name,
+                                      @RequestParam(name = "email", defaultValue = "FakeEmail@2lazy2make1.com") String email,
+                                      @RequestParam(name = "password", defaultValue = "shouldBHashed") String password) {
+        try {
+            Users users = new Users(name, email, password);
             return new ResponseEntity<>(usersRepo.save(users), HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -48,12 +62,14 @@ public class UsersController {
         Optional<Users> user = usersRepo.findById(id);
 
         if(user.isPresent()){
+
             return new ResponseEntity<Users>(user.get(), HttpStatus.OK);
+
         }
         return new ResponseEntity<Users>(HttpStatus.NOT_FOUND);
     }
 
-    @PutMapping("/users/{id}")
+    @PutMapping("/users")
     public ResponseEntity<Users> updateUser(@RequestBody Users users){
         try{
             return new ResponseEntity<Users>(usersRepo.save(users), HttpStatus.OK);
