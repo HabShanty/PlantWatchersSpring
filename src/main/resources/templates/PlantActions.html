@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Plant Actions</title>
+</head>
+<body>
+<h1>Plant Actions</h1>
+
+<form method="post" action="/water/{id}">
+  <input type="hidden" name="id" value="1">
+  <button type="submit">Water Plant</button>
+</form>
+
+<form method="post" action="/feed/{id}">
+  <input type="hidden" name="id" value="1">
+  <button type="submit">Feed Plant</button>
+</form>
+
+<form method="post" action="/harvest/{id}">
+  <input type="hidden" name="id" value="1">
+  <button type="submit">Harvest Plant</button>
+</form>
+</body>
+</html>
