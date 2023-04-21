@@ -1,0 +1,16 @@
+Tutorials on the spring site are good but seem to fail at doing REST but this video worked at every step:
+https://www.youtube.com/watch?v=2uThD90asWo&t=42s&ab_channel=B2Tech
+
+http://localhost:8080/plant/?userId=1&name=MyPlant&type=Flower
+
+http://localhost:8080/plant/?userId=1&name=laceylady&type=Flower
+
+http://localhost:8080/plant/?userId=2&name=wiltingWily&type=bush
+
+http://localhost:8080/users/?name=NewFarmer&email=FakeEmail@2lazy2make1.com&password=shouldBHashed
+
+{
+    "name": "NewFarmer",
+    "email": "FakeEmail@2lazy2make1.com",
+    "password": "shouldBHashed"
+}
