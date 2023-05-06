@@ -1,6 +1,5 @@
 package com.plantwatchersspring.entity;
 
-import com.fasterxml.jackson.annotation.JsonAnySetter;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,6 +16,7 @@ public class Users {
     private String name;
     private String email;
     private String password;
+
 
     protected Users(){}
 
@@ -80,5 +80,6 @@ public class Users {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }
 

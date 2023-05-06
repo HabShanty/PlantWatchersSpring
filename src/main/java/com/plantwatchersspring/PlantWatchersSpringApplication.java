@@ -1,9 +1,9 @@
 package com.plantwatchersspring;
 
 import com.plantwatchersspring.entity.Plant;
+import com.plantwatchersspring.entity.Users;
 import com.plantwatchersspring.repository.PlantRepository;
 import com.plantwatchersspring.repository.UserRepository;
-import com.plantwatchersspring.entity.Users;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,11 +12,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @ComponentScan({"com.plantwatchersspring.repository", "com.plantwatchersspring.entity", "com.plantwatchersspring.controller"})
 @SpringBootApplication
+@RestController
 public class PlantWatchersSpringApplication {
 
     //root resource at http://localhost:8080/
