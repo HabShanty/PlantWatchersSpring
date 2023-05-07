@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="938cf05c-8ff1-4f63-9c91-242c2d94f7ad" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/plantwatchersspring/PlantWatchersSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/plantwatchersspring/PlantWatchersSpringApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/plantwatchersspring/entity/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/plantwatchersspring/entity/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/plantwatchersspring/core/PlantWatchersSpringApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +94,8 @@
       <workItem from="1682904955893" duration="1298000" />
       <workItem from="1683077996315" duration="27000" />
       <workItem from="1683332411461" duration="1526000" />
-      <workItem from="1683333977262" duration="1230000" />
+      <workItem from="1683333977262" duration="1318000" />
+      <workItem from="1683480256266" duration="585000" />
     </task>
     <servers />
   </component>

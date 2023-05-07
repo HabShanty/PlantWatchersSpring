@@ -7,6 +7,25 @@
 </head>
 <body style="background-color:#F9FFED">
 
+<script type="text/javascript">
+    $.get("/user", function(data) {
+        $("#user").html(data.name);
+        $(".unauthenticated").hide()
+        $(".authenticated").show()
+    });
+</script>
+
+<div class="container unauthenticated">
+    Authenticate with GitHub: <a href="/oauth2/authorization/github">click here</a>
+</div>
+<div class="container authenticated" style="display:none">
+    Logged in as: <span id="user"></span>
+</div>
+
+
+
+
+<!--
 <form action="/hello" method="GET" id="nameForm">
     <div>
         <label for="nameField">How should the app call you?</label>
@@ -26,7 +45,7 @@
     <label for="username">Enter your username:</label>
     <input type="text" id="username" name="username" required>
     <button type="submit">View My Plants</button>
-</form>
+</form> -->
 
 <div class="block">
 
