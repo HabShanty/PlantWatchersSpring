@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="938cf05c-8ff1-4f63-9c91-242c2d94f7ad" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/plantwatchersspring/controller/SocialApplication.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +58,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Habor/Desktop/CS classes/Spring 2023/445 - Networking/DomnNates/Game-Server-main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Habor/Desktop/CS classes/Spring 2023/435 - Web Services/PlantWatchersSecure&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;f2312dade56acde2eea480ea65f04beb&quot;
   }
 }</component>
@@ -95,7 +96,8 @@
       <workItem from="1683077996315" duration="27000" />
       <workItem from="1683332411461" duration="1526000" />
       <workItem from="1683333977262" duration="1318000" />
-      <workItem from="1683480256266" duration="585000" />
+      <workItem from="1683480256266" duration="2388000" />
+      <workItem from="1683482914850" duration="2316000" />
     </task>
     <servers />
   </component>
